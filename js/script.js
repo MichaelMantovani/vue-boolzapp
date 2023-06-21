@@ -11,7 +11,7 @@ const app = Vue.createApp ({
         {
           id: 1,
           name: 'Michele',
-          avatar: '_1.png',
+          avatar: '_1',
           visible: true,
           messages: [
             {
@@ -37,7 +37,7 @@ const app = Vue.createApp ({
         {
           id: 2,
           name: 'Fabio',
-          avatar: '_2.png',
+          avatar: '_2',
           visible: true,
           messages: [
             {
@@ -63,7 +63,7 @@ const app = Vue.createApp ({
         {
           id: 3,
           name: 'Samuele',
-          avatar: '_3.png',
+          avatar: '_3',
           visible: true,
           messages: [
             {
@@ -89,7 +89,7 @@ const app = Vue.createApp ({
         {
           id: 4,
           name: 'Alessandro B.',
-          avatar: '_4.png',
+          avatar: '_4',
           visible: true,
           messages: [
             {
@@ -109,7 +109,7 @@ const app = Vue.createApp ({
         {
           id: 5,
           name: 'Alessandro L.',
-          avatar: '_5.png',
+          avatar: '_5',
           visible: true,
           messages: [
             {
@@ -129,7 +129,7 @@ const app = Vue.createApp ({
         {
           id: 6,
           name: 'Claudia',
-          avatar: '_5.png',
+          avatar: '_5',
           visible: true,
           messages: [
             {
@@ -155,7 +155,7 @@ const app = Vue.createApp ({
         {
           id: 7,
           name: 'Federico',
-          avatar: '_7.png',
+          avatar: '_7',
           visible: true,
           messages: [
             {
@@ -175,7 +175,7 @@ const app = Vue.createApp ({
         {
           id: 8,
           name: 'Davide',
-          avatar: '_8.png',
+          avatar: '_8',
           visible: true,
           messages: [
             {
@@ -199,6 +199,7 @@ const app = Vue.createApp ({
           ],
         }
       ]
+    
     }
   },
   methods: {
