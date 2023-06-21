@@ -2,6 +2,9 @@
 :root {
   --primary-bgcolor: rgb(234,234,234);
   --icons-color: rgb(177,177,177);
+  --notifications-option-bgcolor: rgb(142,218,252);
+  --notifications-option-color: rgb(100,136,158);
+  --icons-bgcolor: rgb(242,251,255);
 }
 
 /* GENERAL */
@@ -32,9 +35,6 @@ header{
 
 
 
-.notifications-options{
-  height: 80px;
-}
 
 .contacts-searchbar{
   height: 60px;
@@ -71,6 +71,9 @@ main{
   border-radius: 50%;
 }
 
+.icon-background{
+  color: var(--icons-bgcolor);
+}
 
 /* SIDEBAR */
 .sidebar{
@@ -81,3 +84,13 @@ main{
   height: 100px;
   background-color: var(--primary-bgcolor);
 }
+
+.notifications-options{
+  height: 80px;
+  background-color: var(--notifications-option-bgcolor);
+}
+
+.notifications-options a{
+  color: var(--notifications-option-color);
+}
+
