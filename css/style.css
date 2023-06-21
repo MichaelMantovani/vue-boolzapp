@@ -8,7 +8,6 @@
 }
 
 /* GENERAL */
-
 body{
   background: linear-gradient(to bottom, rgb(0,150,136) 0 16%, rgb(218,219,211) 0 84%);
 }
@@ -34,12 +33,6 @@ header{
 }
 
 
-
-
-.contacts-searchbar{
-  height: 60px;
-}
-
 .contacts{
   height: calc(100% - 240px);
   overflow: auto;
@@ -56,6 +49,10 @@ main{
 
 .send-options{
   height: 120px;
+}
+
+button{
+  background-color: white;
 }
 
 
@@ -92,5 +89,9 @@ main{
 
 .notifications-options a{
   color: var(--notifications-option-color);
+}
+
+.contacts-searchbar {
+  background-color: var(--primary-bgcolor);
 }
 
