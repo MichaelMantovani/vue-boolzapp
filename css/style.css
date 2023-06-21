@@ -1,6 +1,12 @@
 
 
 /* GENERAL */
+
+body{
+  /* background: linear-gradient(to bottom, rgb(0,150,136) 20%, rgb(217,219,214) 80%); */
+  background: linear-gradient(to bottom, rgb(0,150,136) 0 16%, rgb(218,219,211) 0 84%);
+}
+
 .container{
   height:  calc(100vh - 60px);
   margin: 30px auto
