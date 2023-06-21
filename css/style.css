@@ -7,6 +7,8 @@
   --icons-bgcolor: rgb(242,251,255);
   --new-message-options-color: rgb(107,115,118);
   --new-message-options-bgcolor: rgb(243,238,234);
+  --user-send-message: rgb(213,249,186);
+  --contact-send-message: white;
 }
 
 /** GENERAL **/
@@ -33,10 +35,6 @@ button{
 
 
 /** UTILITY **/
-.bsb{
-  border: 1px solid black;
-}
-
 .contacts-pic{
   width: 60px;
   height: 60px;
@@ -51,8 +49,21 @@ button{
   color: var(--grey-font);
 }
 
+.send-message{
+  border-radius: 5px;
+}
 
+.message-date{
+  font-size: 8px;
+}
 
+.user-send-message{
+  background-color: var(--user-send-message);
+}
+
+.contact-send-message{
+  background-color: var(--contact-send-message);
+}
 
 
 /** SIDEBAR **/
@@ -110,6 +121,11 @@ main{
   height: calc(100% - 60px);
   overflow: auto;
   background-image: url(../img/mine.jpg);
+  padding: 0 80px;
+}
+
+.user-message, .contact-message{
+  flex-basis: 40%;
 }
 
 .new-message-options{

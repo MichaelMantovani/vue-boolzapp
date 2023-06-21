@@ -108,12 +108,26 @@
           </div>
         </header>
         <main>
-          <div class="message"></div>
+          <div class="message d-flex flex-column">
+            <div class="d-flex flex-column align-items-end mt-1">
+              <div class="send-message user-send-message p-2 mb-2">Hai portato fuori il cane?
+                <div class="message-date text-end">10/01/2020 15:30:55</div>
+              </div>
+              <div class="send-message user-send-message p-2">Ricordati di dargli da mangiare
+                <div class="message-date text-end">10/01/2020 15:50:00</div>
+              </div>
+            </div>
+            <div class="contact-message d-flex flex-column align-items-start  mt-1">
+              <div class="send-message contact-send-message p-2 mb-2">Hai portato fuori il cane?
+                <div class="message-date text-end">10/01/2020 15:30:55</div>
+              </div>
+            </div>
+            
+          </div>
 
           <div class="new-message-options d-flex align-items-center">
             <div class="emoji p-3">
               <i class="fa-regular fa-face-smile fa-xl"></i>
-
             </div>
             <div class="write-message flex-grow-1">
               <input type="text" class="form-control" placeholder="Scrivi un messaggio">
@@ -126,6 +140,7 @@
       </div>
     </div>
   </div>
+  <span class="badge text-bg-success">Success</span>
   
 </body>
 </html>
