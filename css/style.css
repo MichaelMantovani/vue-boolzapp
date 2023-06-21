@@ -5,6 +5,8 @@
   --notifications-option-bgcolor: rgb(142,218,252);
   --grey-font: rgb(100,136,158);
   --icons-bgcolor: rgb(242,251,255);
+  --new-message-options-color: rgb(107,115,118);
+  --new-message-options-bgcolor: rgb(243,238,234);
 }
 
 /** GENERAL **/
@@ -22,11 +24,11 @@ body{
   color: var(--icons-color);
 }
 
-
-
 button{
   background-color: white;
 }
+
+
 
 
 
@@ -50,6 +52,9 @@ button{
 }
 
 
+
+
+
 /** SIDEBAR **/
 .sidebar{
   width: calc(100% / 12 * 6);
@@ -68,12 +73,12 @@ button{
 
 
 .contacts-searchbar {
-  height: 45px;
+  height: 55px;
   background-color: var(--primary-bgcolor);
 }
 
 .contacts{
-  height: calc(100% - 225px);
+  height: calc(100% - 235px);
   overflow: auto;
   background-color: white;
 }
@@ -102,14 +107,22 @@ main{
 }
 
 .message{
-  height: calc(100% - 120px);
+  height: calc(100% - 60px);
   overflow: auto;
   background-image: url(../img/mine.jpg);
 }
 
-.send-options{
-  height: 120px;
+.new-message-options{
+  height: 60px;
+  background-color: var(--new-message-options-bgcolor);
 }
+
+.new-message-options i{
+  color: var(--new-message-options-color);
+}
+
+
+
 
 
 

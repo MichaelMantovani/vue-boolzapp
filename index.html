@@ -58,7 +58,7 @@
 
 
         <!-- Search bar for contacts -->
-         <div class="contacts-searchbar input-group p-1">
+         <div class="contacts-searchbar input-group p-2">
           <button class="border-0" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
           <input type="text" class="form-control border-0" placeholder="Cerca o inizia una nuova chat">
         </div>
@@ -92,7 +92,7 @@
 
 
 
-      <div class="bsb main-section">
+      <div class="main-section border-start ">
         <header class="d-flex justify-content-between align-items-center">
           <div class="chat-contact d-flex align-items-center gap-2 px-2">
             <img class="contacts-pic" src="img/avatar_1.jpg" alt="User pic">
@@ -108,8 +108,20 @@
           </div>
         </header>
         <main>
-          <div class="bsb message"></div>
-          <div class="bsb send-options"></div>
+          <div class="message"></div>
+
+          <div class="new-message-options d-flex align-items-center">
+            <div class="emoji p-3">
+              <i class="fa-regular fa-face-smile fa-xl"></i>
+
+            </div>
+            <div class="write-message flex-grow-1">
+              <input type="text" class="form-control" placeholder="Scrivi un messaggio">
+            </div>
+            <div class="vocal-message p-3">
+              <i class="fa-solid fa-microphone fa-xl"></i>
+            </div>
+          </div>
         </main>
       </div>
     </div>
@@ -117,3 +129,4 @@
   
 </body>
 </html>
+
