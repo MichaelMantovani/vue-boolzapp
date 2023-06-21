@@ -200,6 +200,8 @@ const app = Vue.createApp ({
         }
       ]
     }
+  },
+  methods: {
   }
 })
 

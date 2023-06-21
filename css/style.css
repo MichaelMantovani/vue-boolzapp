@@ -1,32 +1,36 @@
-
+/* CUSTOM PROPERTIES */
+:root {
+  --primary-bgcolor: rgb(234,234,234);
+  --icons-color: rgb(177,177,177);
+}
 
 /* GENERAL */
 
 body{
-  /* background: linear-gradient(to bottom, rgb(0,150,136) 20%, rgb(217,219,214) 80%); */
   background: linear-gradient(to bottom, rgb(0,150,136) 0 16%, rgb(218,219,211) 0 84%);
 }
+
 
 .container{
   height:  calc(100vh - 60px);
   margin: 30px auto
 }
 
+.fa-solid{
+  color: var(--icons-color);
+}
+
 .main-section{
   width: calc(100% / 12 * 8);
 }
 
-.sidebar{
-  width: calc(100% / 12 * 4);
-}
+
 
 header{
   height: 100px;
 }
 
-.sidebar-header{
-  height: 100px;
-}
+
 
 .notifications-options{
   height: 80px;
@@ -55,7 +59,25 @@ main{
 }
 
 
+
 /* UTILITY */
 .bsb{
   border: 1px solid black;
+}
+
+.contacts-pic{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+
+/* SIDEBAR */
+.sidebar{
+  width: calc(100% / 12 * 6);
+}
+
+.sidebar-header{
+  height: 100px;
+  background-color: var(--primary-bgcolor);
 }
