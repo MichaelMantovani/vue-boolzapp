@@ -125,10 +125,6 @@ main{
   padding: 0 80px;
 }
 
-.user-message, .contact-message{
-  flex-basis: 40%;
-}
-
 .new-message-options{
   height: 60px;
   background-color: var(--new-message-options-bgcolor);
