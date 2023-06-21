@@ -1,13 +1,13 @@
-/* CUSTOM PROPERTIES */
+/** CUSTOM PROPERTIES **/
 :root {
   --primary-bgcolor: rgb(234,234,234);
   --icons-color: rgb(177,177,177);
   --notifications-option-bgcolor: rgb(142,218,252);
-  --notifications-option-color: rgb(100,136,158);
+  --grey-font: rgb(100,136,158);
   --icons-bgcolor: rgb(242,251,255);
 }
 
-/* GENERAL */
+/** GENERAL **/
 body{
   background: linear-gradient(to bottom, rgb(0,150,136) 0 16%, rgb(218,219,211) 0 84%);
 }
@@ -22,17 +22,81 @@ body{
   color: var(--icons-color);
 }
 
+
+
+button{
+  background-color: white;
+}
+
+
+
+/** UTILITY **/
+.bsb{
+  border: 1px solid black;
+}
+
+.contacts-pic{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.icon-background{
+  color: var(--icons-bgcolor);
+}
+
+.grey-font{
+  color: var(--grey-font);
+}
+
+
+/** SIDEBAR **/
+.sidebar{
+  width: calc(100% / 12 * 6);
+}
+
+.sidebar-header{
+  height: 100px;
+  background-color: var(--primary-bgcolor);
+}
+
+.notifications-options{
+  height: 80px;
+  background-color: var(--notifications-option-bgcolor);
+}
+
+
+
+.contacts-searchbar {
+  height: 45px;
+  background-color: var(--primary-bgcolor);
+}
+
+.contacts{
+  height: calc(100% - 225px);
+  overflow: auto;
+  background-color: white;
+}
+
+
+
+
+/** MAIN SECTION **/
+
 .main-section{
   width: calc(100% / 12 * 8);
 }
 
 
-
+/*HEADER */
 header{
   height: 100px;
+  background-color: var(--primary-bgcolor);
 }
 
 
+
+/* MAIN */
 
 
 main{
@@ -48,55 +112,5 @@ main{
   height: 120px;
 }
 
-button{
-  background-color: white;
-}
 
-
-
-/* UTILITY */
-.bsb{
-  border: 1px solid black;
-}
-
-.contacts-pic{
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-}
-
-.icon-background{
-  color: var(--icons-bgcolor);
-}
-
-
-/* SIDEBAR */
-.sidebar{
-  width: calc(100% / 12 * 6);
-}
-
-.sidebar-header{
-  height: 100px;
-  background-color: var(--primary-bgcolor);
-}
-
-.notifications-options{
-  height: 80px;
-  background-color: var(--notifications-option-bgcolor);
-}
-
-.notifications-options a{
-  color: var(--notifications-option-color);
-}
-
-.contacts-searchbar {
-  height: 45px;
-  background-color: var(--primary-bgcolor);
-}
-
-.contacts{
-  height: calc(100% - 225px);
-  overflow: auto;
-  background-color: white;
-}
 
