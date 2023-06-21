@@ -18,6 +18,24 @@ header{
   height: 100px;
 }
 
+.sidebar-header{
+  height: 100px;
+}
+
+.notifications-options{
+  height: 80px;
+}
+
+.contacts-searchbar{
+  height: 60px;
+}
+
+.contacts{
+  height: calc(100% - 240px);
+  overflow: auto;
+}
+
+
 /* UTILITY */
 .bsb{
   border: 1px solid black;
