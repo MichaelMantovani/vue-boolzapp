@@ -66,25 +66,9 @@
         <!-- contacts list -->
         <div class="contacts ps-3">
           <ul class="list-unstyled">
-            <li class="border-bottom border-light-subtle py-2">
-              <img class="contacts-pic me-2" src="img/avatar_1.jpg" alt="">
-              Michele
-            </li>
-            <li class="border-bottom border-light-subtle py-2">
-              <img class="contacts-pic me-2" src="img/avatar_2.jpg" alt="">
-              Marco
-            </li>
-            <li class="border-bottom border-light-subtle py-2">
-              <img class="contacts-pic me-2" src="img/avatar_3.jpg" alt="">
-              Fabio
-            </li>
-            <li class="border-bottom border-light-subtle py-2">
-              <img class="contacts-pic me-2" src="img/avatar_4.jpg" alt="">
-              Francesco
-            </li>
-            <li class="border-bottom border-light-subtle py-2">
-              <img class="contacts-pic me-2" src="img/avatar_5.jpg" alt="">
-              Giulio
+            <li class="border-bottom border-light-subtle py-2" v-for="contact in contacts">
+              <img class="contacts-pic me-2" :src="getAvatarPic (contact.avatar)" :alt="contact.name" :title="contact.name">
+              {{ contact.name }}
             </li>
           </ul>
         </div>
@@ -140,7 +124,6 @@
       </div>
     </div>
   </div>
-  <span class="badge text-bg-success">Success</span>
   
 </body>
 </html>
