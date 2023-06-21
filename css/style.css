@@ -35,6 +35,19 @@ header{
   overflow: auto;
 }
 
+main{
+  height: calc(100% - 100px);
+}
+
+.message{
+  height: calc(100% - 120px);
+  overflow: auto;
+}
+
+.send-options{
+  height: 120px;
+}
+
 
 /* UTILITY */
 .bsb{
