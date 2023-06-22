@@ -3,6 +3,7 @@ console.log('VUE OK', Vue)
 const app = Vue.createApp ({
   data () {
     return {
+      currentChatId: 0,
       user: {
         name: 'Nome Utente',
         avatar: '_io'
@@ -203,13 +204,20 @@ const app = Vue.createApp ({
     }
   },
   methods: {
-    renderAvatarPic (targetAvatar) {
-     return `img/avatar${targetAvatar}.jpg`
+    renderAvatarPic : targetAvatar => `img/avatar${targetAvatar}.jpg`,
+    
+    setCurrentChatId (targetId) {
+      return this.currentChatId = targetId
     }
+  
   }
+    
+    
+
 })
 
 app.mount('#root')
+
 
 
 

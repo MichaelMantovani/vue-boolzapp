@@ -96,6 +96,10 @@ button{
   background-color: white;
 }
 
+.contacts li{
+  cursor: pointer;
+}
+
 
 
 
@@ -110,6 +114,9 @@ button{
 header{
   height: 100px;
   background-color: var(--primary-bgcolor);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 
@@ -119,11 +126,25 @@ main{
   height: calc(100% - 100px);
 }
 
+
+.greetings{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chat-contact {
+  display: flex;
+  align-items: space;
+  gap: 0.5rem ;
+  
+}
+
 .message{
   height: calc(100% - 60px);
   overflow: auto;
   background-image: url(../img/mine.jpg);
-  padding: 0 80px;
+  padding: 0 30px;
 }
 
 .new-message-options{

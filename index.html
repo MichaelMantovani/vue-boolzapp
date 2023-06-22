@@ -66,7 +66,7 @@
         <!-- Contacts list -->
         <div class="contacts ps-3">
           <ul class="list-unstyled">
-            <li class="border-bottom border-light-subtle py-2" v-for="contact in contacts">
+            <li class="border-bottom border-light-subtle py-2" v-for="contact in contacts" @click="setCurrentChatId(contact.id)">
               <img class="contacts-pic me-2" :src="renderAvatarPic(contact.avatar)" :alt="contact.name" :title="contact.name">
               {{ contact.name }}
             </li>
@@ -75,24 +75,28 @@
       </div>
 
 
-
+      <!-- Main Section -->
       <div class="main-section border-start ">
-        <header class="d-flex justify-content-between align-items-center">
-          <div class="chat-contact d-flex align-items-center gap-2 px-2">
-            <img class="contacts-pic" src="img/avatar_1.jpg" alt="User pic">
-            <div class="user-name fs-5">Michele
+
+
+        <div class="greetings h-100 text-center" v-show="currentChatId === 0">
+          <h1>Benvenuto in Boolzapp, seleziona il contatto a cui vuoi scrivere</h1>
+        </div>
+        <header v-show="currentChatId !== 0">
+          <div class="chat-contact px-2" v-for=" contact in contacts" v-show="currentChatId === contact.id">
+            <img class="contacts-pic" :src="renderAvatarPic(contact.avatar)" :alt="contact.name" :title="contact.name">
+            <div class="user-name fs-5">{{ contact.name }}
               <div class="grey-font fs-6">Ultimo accesso oggi</div>
             </div>
-            
           </div>
-          <div class="chat-options d-flex gap-4 pe-4">
+          <div class="chat-options d-flex gap-4 pe-4" >
             <i class="fa-solid fa-magnifying-glass fa-xl"></i>
             <i class="fa-solid fa-paperclip fa-xl"></i>
             <i class="fa-solid fa-ellipsis-vertical fa-xl"></i>
           </div>
         </header>
-        <main>
-          <div class="message d-flex flex-column gap-3">
+        <main v-show="currentChatId !== 0">
+          <div class="message d-flex flex-column gap-3" >
             <div class="user-message d-flex flex-column align-items-end mt-1">
               <div class="send-message user-send-message p-2 mb-2">Hai portato fuori il cane?
                 <div class="message-date text-end">10/01/2020 15:30:55</div>
