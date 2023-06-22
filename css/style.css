@@ -13,13 +13,14 @@
 
 /** GENERAL **/
 body{
-  background: linear-gradient(to bottom, rgb(0,150,136) 0 16%, rgb(218,219,211) 0 84%);
+  height: 100vh;
+  background-image: linear-gradient( rgb(0,150,136) 0 15%, rgb(218,219,211) 0 85%);
 }
 
 
 .container{
-  height:  calc(100vh - 60px);
-  margin: 30px auto
+  height:  100%;
+  padding: 30px 0;
 }
 
 .fa-solid{

@@ -21,7 +21,7 @@
   <title>Boolzapp</title>
 </head>
 <body>
-  <div id="root">
+  <div id="root" class="h-100">
     <div class="container d-flex">
 
       <!-- Sidebar  -->
@@ -63,11 +63,11 @@
           <input type="text" class="form-control border-0" placeholder="Cerca o inizia una nuova chat">
         </div>
 
-        <!-- contacts list -->
+        <!-- Contacts list -->
         <div class="contacts ps-3">
           <ul class="list-unstyled">
             <li class="border-bottom border-light-subtle py-2" v-for="contact in contacts">
-              <img class="contacts-pic me-2" :src="getAvatarPic (contact.avatar)" :alt="contact.name" :title="contact.name">
+              <img class="contacts-pic me-2" :src="getAvatarPic(contact.avatar)" :alt="contact.name" :title="contact.name">
               {{ contact.name }}
             </li>
           </ul>
