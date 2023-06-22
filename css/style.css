@@ -7,8 +7,8 @@
   --icons-bgcolor: rgb(242,251,255);
   --new-message-options-color: rgb(107,115,118);
   --new-message-options-bgcolor: rgb(243,238,234);
-  --user-send-message: rgb(213,249,186);
-  --contact-send-message: white;
+  --sent-message: rgb(213,249,186);
+  --received-message: white;
 }
 
 /** GENERAL **/
@@ -50,21 +50,26 @@ button{
   color: var(--grey-font);
 }
 
-.send-message{
-  border-radius: 5px;
-  min-width: 150px;
-}
-
 .message-date{
   font-size: 8px;
+  text-align: end;
 }
 
-.user-send-message{
-  background-color: var(--user-send-message);
+.message{
+  min-width: 150px;
+  padding: 8px;
+  border-radius: 5px;
+  margin-top: 0.25rem;
 }
 
-.contact-send-message{
-  background-color: var(--contact-send-message);
+.sent{
+  background-color: var(--sent-message);
+  align-self: end;
+}
+
+.received{
+  background-color: var(--received-message);
+  align-self: start;
 }
 
 
@@ -140,7 +145,7 @@ main{
   
 }
 
-.message{
+.chat-section{
   height: calc(100% - 60px);
   overflow: auto;
   background-image: url(../img/mine.jpg);

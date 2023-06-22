@@ -96,21 +96,19 @@
           </div>
         </header>
         <main v-show="currentChatId !== 0">
-          <div class="message d-flex flex-column gap-3" >
-            <div class="user-message d-flex flex-column align-items-end mt-1">
-              <div class="send-message user-send-message p-2 mb-2">Hai portato fuori il cane?
-                <div class="message-date text-end">10/01/2020 15:30:55</div>
-              </div>
-              <div class="send-message user-send-message p-2">Ricordati di dargli da mangiare
-                <div class="message-date text-end">10/01/2020 15:50:00</div>
-              </div>
+          <div class="chat-section d-flex flex-column gap-2" >
+            <div class="message sent">
+              Hai portato fuori il cane?
+              <div class="message-date">10/01/2020 15:30:55</div>
             </div>
-            <div class="contact-message d-flex flex-column align-items-start  mt-1">
-              <div class="send-message contact-send-message p-2 mb-2">Tutto fatto!
-                <div class="message-date text-end">10/01/2020 16:15:22</div>
-              </div>
+            <div class="message sent">
+              Ricordati di stendere i panni
+              <div class="message-date">10/01/2020 15:50:00</div>
             </div>
-            
+            <div class="message received">
+              Tutto fatto!
+              <div class="message-date">10/01/2020 16:15:22</div>
+            </div>
           </div>
 
           <div class="new-message-options d-flex align-items-center">
