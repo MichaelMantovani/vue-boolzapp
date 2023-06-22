@@ -203,7 +203,7 @@ const app = Vue.createApp ({
     }
   },
   methods: {
-    getAvatarPic (targetAvatar) {
+    renderAvatarPic (targetAvatar) {
      return `img/avatar${targetAvatar}.jpg`
     }
   }
