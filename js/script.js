@@ -5,6 +5,7 @@ const app = Vue.createApp ({
     return {
       currentChatId: 0,
       newMessages: '',
+      searchTerm: '',
       user: {
         name: 'Nome Utente',
         avatar: '_io'
@@ -206,6 +207,15 @@ const app = Vue.createApp ({
     
     }
   },
+  computed: {
+
+    // Funzione per ricerca dei contatti
+    filteredConctacts () {
+      const term = this.searchTerm.toLowerCase()
+         return this.contacts.filter(({name}) => name.toLowerCase().includes(term))
+      }
+
+  },
   methods: {
 
 
@@ -236,7 +246,13 @@ const app = Vue.createApp ({
       }
 
       this.newMessages = ''
-    }
+    },
+
+   
+      
+    
+
+ 
   
   }
     

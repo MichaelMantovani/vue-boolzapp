@@ -57,16 +57,16 @@
         </div>
 
 
-        <!-- Search bar for contacts -->
+        <!-- Search bar for contacts list-->
          <div class="contacts-searchbar input-group p-2">
           <button class="border-0" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
-          <input type="text" class="form-control border-0 shadow-none" placeholder="Cerca o inizia una nuova chat">
+          <input v-model.trim="searchTerm" type="text" class="form-control border-0 shadow-none" placeholder="Cerca o inizia una nuova chat" >
         </div>
 
         <!-- Contacts list -->
         <div class="contacts ps-3">
           <ul class="list-unstyled">
-            <li class="border-bottom border-light-subtle py-2" v-for="contact in contacts" @click="setCurrentChatId(contact.id)">
+            <li class="border-bottom border-light-subtle py-2" v-for="contact in filteredConctacts" @click="setCurrentChatId(contact.id)">
               <img class="contacts-pic me-2" :src="renderAvatarPic(contact.avatar)" :alt="contact.name" :title="contact.name">
               {{ contact.name }}
             </li>
