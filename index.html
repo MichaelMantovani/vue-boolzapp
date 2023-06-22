@@ -78,10 +78,13 @@
       <!-- Main Section -->
       <div class="main-section border-start ">
 
-
+        <!-- Initial greeting message -->
         <div class="greetings h-100 text-center" v-show="currentChatId === 0">
           <h1>Benvenuto in Boolzapp, seleziona il contatto a cui vuoi scrivere</h1>
         </div>
+
+
+        <!-- Chat contact and chat options -->
         <header v-show="currentChatId !== 0">
           <div class="chat-contact px-2" v-for=" contact in contacts" v-show="currentChatId === contact.id">
             <img class="contacts-pic" :src="renderAvatarPic(contact.avatar)" :alt="contact.name" :title="contact.name">
@@ -95,6 +98,9 @@
             <i class="fa-solid fa-ellipsis-vertical fa-xl"></i>
           </div>
         </header>
+
+
+        <!-- Chat section -->
         <main v-show="currentChatId !== 0">
           <div class="chat-section gap-2" v-for="contact in contacts" v-show="currentChatId === contact.id">
             <div v-for="message in contact.messages" :class="message.status" class="message">
@@ -103,13 +109,20 @@
             </div>
           </div>
 
+
           <div class="new-message-options d-flex align-items-center">
+
+            <!-- Emoji button -->
             <div class="emoji p-3">
               <i class="fa-regular fa-face-smile fa-xl"></i>
             </div>
+            
+            <!-- New message input box -->
             <div class="write-message flex-grow-1">
               <input type="text" class="form-control" placeholder="Scrivi un messaggio">
             </div>
+
+            <!-- Vocal message  -->
             <div class="vocal-message p-3">
               <i class="fa-solid fa-microphone fa-xl"></i>
             </div>

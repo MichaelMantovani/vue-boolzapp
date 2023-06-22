@@ -3,7 +3,7 @@ console.log('VUE OK', Vue)
 const app = Vue.createApp ({
   data () {
     return {
-      currentChatId: 1,
+      currentChatId: 0,
       user: {
         name: 'Nome Utente',
         avatar: '_io'
