@@ -150,6 +150,8 @@ main{
   overflow: auto;
   background-image: url(../img/mine.jpg);
   padding: 0 30px;
+  display: flex;
+  flex-direction: column;
 }
 
 .new-message-options{

@@ -96,18 +96,10 @@
           </div>
         </header>
         <main v-show="currentChatId !== 0">
-          <div class="chat-section d-flex flex-column gap-2" >
-            <div class="message sent">
-              Hai portato fuori il cane?
-              <div class="message-date">10/01/2020 15:30:55</div>
-            </div>
-            <div class="message sent">
-              Ricordati di stendere i panni
-              <div class="message-date">10/01/2020 15:50:00</div>
-            </div>
-            <div class="message received">
-              Tutto fatto!
-              <div class="message-date">10/01/2020 16:15:22</div>
+          <div class="chat-section gap-2" v-for="contact in contacts" v-show="currentChatId === contact.id">
+            <div v-for="message in contact.messages" :class="message.status" class="message">
+              {{ message.message }}
+              <div class="message-date">{{ message.date }}</div>
             </div>
           </div>
 
