@@ -235,16 +235,20 @@ const app = Vue.createApp ({
     sendNewMessage () {
 
       // Genero la data del messaggio
-      const date = new Date ()
-      const currentDate = date.getDate() + "/" + (date.getMonth()+1)  + "/"  + date.getFullYear() + " " 
-      + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+      const currentDate = new Date().toLocaleString()
 
       // Identifico il contatto con l'id corrente
       const currentChat = this.contacts.find(contact => contact.id === this.currentChatId)
      
       // Controllo che ci sia un nuovo messaggio
       if (this.newMessages.length) {
-      currentChat.messages.push({id: new Date().getTime(), date: currentDate, message: this.newMessages, status: 'sent'})
+      currentChat.messages.push(
+        {
+          id: new Date().getTime(), 
+          date: currentDate, 
+          message: this.newMessages, 
+          status: 'sent'}
+        )
       }
 
       this.newMessages = ''
