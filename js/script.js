@@ -3,7 +3,7 @@ console.log('VUE OK', Vue)
 const app = Vue.createApp ({
   data () {
     return {
-      currentChatId: 0,
+      currentContactId: 0,
       newMessages: '',
       searchTerm: '',
       user: {
@@ -209,7 +209,14 @@ const app = Vue.createApp ({
   },
   computed: {
 
+    currentContact () {
+      return  this.contacts.find(contact => contact.id === this.currentContactId)
+       
+    },
 
+    currentChat() {
+       return this.currentContact.messages
+    },
 
     // Funzione per ricerca dei contatti
     filteredConctacts () {
@@ -226,29 +233,30 @@ const app = Vue.createApp ({
     
 
     // Funzione per settare l'id della chat selezionata
-    setCurrentChatId (targetId) {
-      return this.currentChatId = targetId
+    setCurrentContactId (targetId) {
+      return this.currentContactId = targetId
+    },
+
+    addNewMessage (text, status) {
+      // Genero la data del messaggio
+      const currentDate = new Date().toLocaleString()
+      
+
+      // Construisco l'oggetto del messaggio
+      return {
+        id: new Date().getTime(), 
+        date: currentDate, 
+        message: text, 
+        status: status}
     },
 
 
     // Funzione per l'invio di nuovi messaggi
     sendNewMessage () {
-
-      // Genero la data del messaggio
-      const currentDate = new Date().toLocaleString()
-
-      // Identifico il contatto con l'id corrente
-      const currentChat = this.contacts.find(contact => contact.id === this.currentChatId)
-     
+      
       // Controllo che ci sia un nuovo messaggio
       if (this.newMessages.length) {
-      currentChat.messages.push(
-        {
-          id: new Date().getTime(), 
-          date: currentDate, 
-          message: this.newMessages, 
-          status: 'sent'}
-        )
+      this.currentChat.push(this.addNewMessage(this.newMessages, 'sent'))
       }
 
       this.newMessages = ''
