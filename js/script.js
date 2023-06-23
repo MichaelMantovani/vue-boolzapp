@@ -253,13 +253,17 @@ const app = Vue.createApp ({
 
     // Funzione per l'invio di nuovi messaggi
     sendNewMessage () {
-      
+
       // Controllo che ci sia un nuovo messaggio
       if (this.newMessages.length) {
       this.currentChat.push(this.addNewMessage(this.newMessages, 'sent'))
       }
 
       this.newMessages = ''
+
+      setTimeout(() => {
+        this.currentChat.push(this.addNewMessage('Ok', 'received'))
+      }, 1000)
     },
 
    
