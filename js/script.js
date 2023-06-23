@@ -4,6 +4,7 @@ const app = Vue.createApp ({
   data () {
     return {
       currentContactId: 1,
+      currentMessageId: 0,
       newMessages: '',
       searchTerm: '',
       user: {
@@ -266,12 +267,16 @@ const app = Vue.createApp ({
       }, 1000)
     },
 
-   
-      
-    
 
- 
-  
+   
+    setCurrentMessageId (messageId) {
+      if(this.currentMessageId === messageId) {
+         this.currentMessageId = 0
+      } else if (this.currentMessageId !== messageId) {
+         this.currentMessageId = messageId
+      }
+    },
+    
   }
     
     

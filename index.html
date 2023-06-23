@@ -106,10 +106,13 @@
         <!-- Chat section -->
         <main>
           <div class="chat-section gap-2" >
-            <div v-for="message in currentChat" :class="message.status" class="message">
+            <div v-for="message in currentChat" :class="message.status" class="message" >
               {{ message.message }}
               <div class="message-date">{{ message.date }}</div>
-              <div class="message-option"><i class="fa-solid fa-chevron-down fa-2xs"></i></div>
+              <div class="message-option" @click="setCurrentMessageId(message.id)"><i class="fa-solid fa-chevron-down fa-2xs"></i></div>
+              <ul class="message-dropdown list-unstyled" v-show="message.id == currentMessageId"  >
+                <li>Elimina messaggio</li>
+              </ul>
             </div>
           </div>
 
