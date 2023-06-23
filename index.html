@@ -119,7 +119,7 @@
             
             <!-- New message input box -->
             <div class="write-message flex-grow-1">
-              <input type="text" class="form-control" placeholder="Scrivi un messaggio" @keyup.enter="sendNewMessage" v-model="newMessages">
+              <input type="text" class="form-control" placeholder="Scrivi un messaggio" @keyup.enter="sendNewMessage" v-model.trim="newMessages">
             </div>
 
             <!-- Vocal message  -->

@@ -209,6 +209,8 @@ const app = Vue.createApp ({
   },
   computed: {
 
+
+
     // Funzione per ricerca dei contatti
     filteredConctacts () {
       const term = this.searchTerm.toLowerCase()
