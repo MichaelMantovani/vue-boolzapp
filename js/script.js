@@ -3,7 +3,7 @@ console.log('VUE OK', Vue)
 const app = Vue.createApp ({
   data () {
     return {
-      currentContactId: 0,
+      currentContactId: 1,
       newMessages: '',
       searchTerm: '',
       user: {
@@ -215,7 +215,7 @@ const app = Vue.createApp ({
     },
 
     currentChat() {
-       return this.currentContact.messages
+       return this.currentContact.messages;
     },
 
     // Funzione per ricerca dei contatti

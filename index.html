@@ -87,8 +87,7 @@
 
 
         <!-- Chat contact and chat options -->
-        <header v-show="currentContactId
-         !== 0">
+        <header>
           <div class="chat-contact px-2" v-for=" contact in contacts" v-show="currentContactId
            === contact.id">
             <img class="contacts-pic" :src="renderAvatarPic(contact.avatar)" :alt="contact.name" :title="contact.name">
@@ -105,11 +104,9 @@
 
 
         <!-- Chat section -->
-        <main v-show="currentContactId
-         !== 0">
-          <div class="chat-section gap-2" v-for="contact in contacts" v-show="currentContactId
-           === contact.id">
-            <div v-for="message in contact.messages" :class="message.status" class="message">
+        <main>
+          <div class="chat-section gap-2" >
+            <div v-for="message in currentContact.messages" :class="message.status" class="message">
               {{ message.message }}
               <div class="message-date">{{ message.date }}</div>
             </div>
