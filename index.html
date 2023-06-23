@@ -111,7 +111,7 @@
               <div class="message-date">{{ message.date }}</div>
               <div class="message-option" @click="setCurrentMessageId(message.id)"><i class="fa-solid fa-chevron-down fa-2xs"></i></div>
               <ul class="message-dropdown list-unstyled" v-show="message.id == currentMessageId"  >
-                <li @click="deleteMessage(message.id)">Elimina messaggio</li>
+                <li @click="deleteMessage(message.id)" class="pb-1">Elimina messaggio</li>
               </ul>
             </div>
           </div>

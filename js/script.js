@@ -256,27 +256,22 @@ const app = Vue.createApp ({
     sendNewMessage () {
 
       // Controllo che ci sia un nuovo messaggio
-      if (this.newMessages.length) {
-      this.currentChat.push(this.addNewMessage(this.newMessages, 'sent'))
-      }
+      if (this.newMessages.length) this.currentChat.push(this.addNewMessage(this.newMessages, 'sent'))
 
       this.newMessages = ''
 
+      // Risposta al nuovo messaggio
       setTimeout(() => {
         this.currentChat.push(this.addNewMessage('Ok', 'received'))
       }, 1000)
     },
 
 
-   
-    setCurrentMessageId (messageId) {
-      if(this.currentMessageId === messageId) {
-         this.currentMessageId = 0
-      } else if (this.currentMessageId !== messageId) {
-         this.currentMessageId = messageId
-      }
-    },
-    
+  //  Funzione setta l'id del messaggio selezionato
+    setCurrentMessageId (messageId) {this.currentMessageId === messageId ? this.currentMessageId = 0 : this.currentMessageId = messageId},
+
+
+    // Funzione che cancella il messaggio selezionato 
     deleteMessage() {
       this.currentContact.messages = this.currentChat.filter(message => this.currentMessageId !== message.id)
       this.currentMessageId = 0
