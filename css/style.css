@@ -84,7 +84,9 @@ button{
   position: absolute;
   top: 18px;
   right: 0;
-  z-index: 1;
+}
+.message-dropdown li {
+  cursor: pointer;
 }
 
 .sent{

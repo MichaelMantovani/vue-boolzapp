@@ -277,6 +277,10 @@ const app = Vue.createApp ({
       }
     },
     
+    deleteMessage() {
+      this.currentContact.messages = this.currentChat.filter(message => this.currentMessageId !== message.id)
+      this.currentMessageId = 0
+    }
   }
     
     
