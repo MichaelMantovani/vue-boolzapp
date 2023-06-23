@@ -56,10 +56,22 @@ button{
 }
 
 .message{
+  position: relative;
   min-width: 150px;
-  padding: 8px;
+  padding: 8px 20px;
   border-radius: 5px;
   margin-top: 0.25rem;
+}
+
+.message-option{
+  position: absolute;
+  top: 0;
+  right: 5px;
+  display: none;
+}
+
+.message:hover .message-option{
+  display: inline-block
 }
 
 .sent{
