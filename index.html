@@ -87,7 +87,7 @@
 
 
         <!-- Chat contact and chat options -->
-        <header>
+        <header v-if="currentContactId !== 0" >
           <div class="chat-contact px-2" v-for=" contact in contacts" v-show="currentContactId
            === contact.id">
             <img class="contacts-pic" :src="renderAvatarPic(contact.avatar)" :alt="contact.name" :title="contact.name">
@@ -110,7 +110,7 @@
               {{ message.message }}
               <div class="message-date">{{ message.date }}</div>
               <div class="message-option" @click="setCurrentMessageId(message.id)"><i class="fa-solid fa-chevron-down fa-2xs"></i></div>
-              <ul class="message-dropdown list-unstyled" v-show="message.id == currentMessageId"  >
+              <ul class="message-dropdown list-unstyled" v-show="message.id == currentMessageId" >
                 <li @click="deleteMessage(message.id)" class="pb-1">Elimina messaggio</li>
               </ul>
             </div>
