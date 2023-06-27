@@ -81,13 +81,13 @@
 
         <!-- Initial greeting message -->
         <div class="greetings h-100 text-center" v-show="currentContactId
-         === 0">
+         === null">
           <h1>Benvenuto in Boolzapp, seleziona il contatto a cui vuoi scrivere</h1>
         </div>
 
 
         <!-- Chat contact and chat options -->
-        <header v-if="currentContactId !== 0" >
+        <header v-if="currentContactId !== null" >
           <div class="chat-contact px-2" v-for=" contact in contacts" v-show="currentContactId
            === contact.id">
             <img class="contacts-pic" :src="renderAvatarPic(contact.avatar)" :alt="contact.name" :title="contact.name">
@@ -104,7 +104,7 @@
 
 
         <!-- Chat section -->
-        <main v-if="currentContactId !== 0">
+        <main v-if="currentContactId !== null">
           <div class="chat-section gap-2" >
             <div v-for="message in currentChat" :class="message.status" class="message" >
               {{ message.message }}

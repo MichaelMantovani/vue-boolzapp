@@ -3,7 +3,7 @@ console.log('VUE OK', Vue)
 const app = Vue.createApp ({
   data () {
     return {
-      currentContactId: 0,
+      currentContactId: null,
       currentMessageId: 0,
       newMessages: '',
       searchTerm: '',
